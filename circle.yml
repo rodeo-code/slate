@@ -10,5 +10,5 @@ deployment:
     branch: master
     commands:
       - npm install -g surge
-      - bundle exec rake build
+      - bundle exec middleman build --clean
       - surge ./build docs.rodeocode.com
