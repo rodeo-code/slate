@@ -3,7 +3,7 @@
 
 Documentation of the RodeoCode web API.
 
-Manage your projects, contributors and payments through one platform.
+Manage your projects, contributors and payments from one platform.
 
 ### Development
 
