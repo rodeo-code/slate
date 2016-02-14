@@ -1,7 +1,27 @@
 # Authentication
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+The RodeoCode supports two types of authentication of requests:
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+- Session + CSRF cookies (standard)
+- API keys supplied via HTTP header (e.g. `Authorization: meowmeowmeow`)
 
-`Authorization: meowmeowmeow`
+## Cookies
+
+```shell
+curl "https://rodeocode.com/login"
+  -X POST
+  -d @- <<REQUEST_BODY
+{
+    "email": "user@domain.com",
+    "password": "12345"
+}
+REQUEST_BODY
+```
+
+To obtain session + CSRF tokens, access the `login` API endpoint.
+
+`/login/`
+
+## JWT API keys
+
+"JWT" refers to [JSON web tokens](https://jwt.io/). *Not available yet.*
