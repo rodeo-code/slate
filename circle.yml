@@ -1,0 +1,11 @@
+test:
+  override:
+    - >
+      echo 'no tests'
+deployment:
+  production:
+    branch: master
+    commands:
+      - npm install -g surge
+      - bundle exec rake build
+      - surge ./build docs.rodeocode.com
