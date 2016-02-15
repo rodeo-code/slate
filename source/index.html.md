@@ -10,7 +10,11 @@ toc_footers:
 includes:
   - authenticate
   - authorize
+  - users
+  - teams
   - projects
+  - commits
+  - pull_requests
   - errors
 
 search: true

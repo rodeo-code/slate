@@ -20,7 +20,7 @@ REQUEST_BODY
 
 To obtain session + CSRF tokens, access the `login` API endpoint.
 
-`/login/`
+`GET https://rodeocode.com/login/`
 
 ## JWT API keys
 
