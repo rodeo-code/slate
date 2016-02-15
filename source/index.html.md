@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: RodeoCode API Reference
 
 language_tabs:
   - shell
@@ -10,6 +10,7 @@ toc_footers:
 includes:
   - authenticate
   - authorize
+  - projects
   - errors
 
 search: true
@@ -17,6 +18,7 @@ search: true
 
 # Introduction
 
-Welcome to the [RodeoCode](https://rodeocode.com/) API! 
+**Welcome to the [RodeoCode](https://rodeocode.com/) API!**
 
-Browse documentation of the API endpoints below.
+Browse documentation of the API endpoints below and samples
+API calls on the right.
