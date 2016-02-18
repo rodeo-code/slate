@@ -12,8 +12,9 @@ includes:
   - authorize
   - users
   - teams
+  - organizations
   - projects
-  - commits
+  - repos
   - pull_requests
   - errors
 
