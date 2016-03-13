@@ -11,11 +11,8 @@ includes:
   - authenticate
   - authorize
   - users
-  - teams
-  - organizations
   - projects
-  - repos
-  - pull_requests
+  - repositories
   - errors
 
 search: true

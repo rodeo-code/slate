@@ -4,43 +4,97 @@
 
 ```shell
 $ curl "https://rodeocode.com/api/projects/"
-{
-  "count": 35,
-  "data": [
+[
     {
-      "id": 1,
-      "name": "rodeo-code/slate"
-    },
-    ...
-  ]
-}
+        "id": 1,
+        "name": "test",
+        "team_id": 1,
+        "repositories": [
+            {
+                "id": 1,
+                "team_id": 1,
+                "created_at": "Sun, 06 Mar 2016 22:30:08 -0000"
+            },
+            ...
+        ],
+        "created_at": "Sun, 06 Mar 2016 22:27:14 -0000"
+    }
+]
 ```
 
-Retrieve all projects that the currently authed user/API key
-has access to.
+Retrieve all projects that the currently authenticated user has access to.
 
 ### HTTP Request
 
 `GET https://rodeocode.com/api/projects/`
 
-## Get Team Projects
+
+## Create a Project
 
 ```shell
-$ curl "https://rodeocode.com/api/teams/1/projects/"
+$ curl "https://rodeocode.com/api/projects/"
+  -X POST
+  -d @- <<REQUEST_BODY
 {
-  "count": 35,
-  "data": [
-    {
-      "id": 1,
-      "name": "rodeo-code/slate"
-    },
-    ...
-  ]
+    "name": "Test"
 }
+REQUEST_BODY
 ```
 
-Retrieve all projects that the given [team](#teams) has access to.
+Create a project.
 
 ### HTTP Request
 
-`GET https://rodeocode.com/api/teams/<team_id>/projects/`
+`POST https://rodeocode.com/api/projects/`
+
+
+## Get a Project
+
+```shell
+$ curl "https://rodeocode.com/api/projects/1/"
+  -X GET
+```
+
+Get an existing project.
+
+### HTTP Request
+
+`GET https://rodeocode.com/api/projects/<projectId>/`
+
+
+## Update a Project
+
+```shell
+$ curl "https://rodeocode.com/api/projects/1/"
+  -X PATCH
+  -d @- <<REQUEST_BODY
+{
+    "name": "modified project"
+}
+REQUEST_BODY
+```
+
+Update an existing project.
+
+### HTTP Request
+
+`PATCH https://rodeocode.com/api/projects/<projectId>/`
+
+
+## Deleting a Project
+
+```shell
+$ curl "https://rodeocode.com/api/projects/1/"
+  -X PATCH
+  -d @- <<REQUEST_BODY
+{
+    "active": false
+}
+REQUEST_BODY
+```
+
+Delete an existing project.
+
+### HTTP Request
+
+`PATCH https://rodeocode.com/api/projects/<projectId>/`
