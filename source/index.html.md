@@ -12,6 +12,9 @@ includes:
   - authorize
   - users
   - projects
+  - features
+  - scenarios
+  - steps
   - repositories
   - errors
 
