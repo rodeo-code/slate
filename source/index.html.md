@@ -16,6 +16,7 @@ includes:
   - scenarios
   - steps
   - repositories
+  - pagination
   - errors
 
 search: true

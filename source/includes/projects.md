@@ -4,22 +4,25 @@
 
 ```shell
 $ curl "https://rodeocode.com/api/projects/"
-[
-    {
-        "id": 1,
-        "name": "test",
-        "team_id": 1,
-        "repositories": [
-            {
-                "id": 1,
-                "team_id": 1,
-                "created_at": "Sun, 06 Mar 2016 22:30:08 -0000"
-            },
-            ...
-        ],
-        "created_at": "Sun, 06 Mar 2016 22:27:14 -0000"
-    }
-]
+{
+    "count": 45,
+    "next": "https://rodeocode.com/api/projects/?page=2",
+    "previous": null,
+    "results": [
+        {
+            "id": 1,
+            "name": "RodeoCode admin",
+            "slug": "rodeocode-admin",
+            "active": true,
+            "created_at": "2016-03-12T07:53:24Z",
+            "team": 1,
+            "repositories": [
+                1
+            ]
+        },
+        ...
+    ]
+}
 ```
 
 Retrieve all projects that the currently authenticated user has access to.
