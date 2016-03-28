@@ -101,3 +101,42 @@ Delete an existing project.
 ### HTTP Request
 
 `PATCH https://rodeocode.com/api/projects/<projectId>/`
+
+
+## Search Projects
+
+```shell
+$ curl "https://rodeocode.com/api/projects/?q=admin"
+{
+    "count": 2,
+    "next": "https://rodeocode.com/api/projects/?q=admin&page=2",
+    "previous": null,
+    "results": [
+        {
+            "id": 1,
+            "name": "RodeoCode admin",
+            "slug": "rodeocode-admin",
+            "active": true,
+            "created_at": "2016-03-12T07:53:24Z",
+            "team": 1,
+            "repositories": [
+                1
+            ]
+        },
+        ...
+    ]
+}
+```
+
+Retrieve projects by keyword query. Results are limited to those projects that 
+the currently authed user has read permissions to view.
+
+### HTTP Request
+
+`GET https://rodeocode.com/api/projects/search/?q=<urlEncodedQueryString>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+q | String | [URL-encoded](https://en.wikipedia.org/wiki/Percent-encoding) string to search for projects by name.
